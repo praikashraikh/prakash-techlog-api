@@ -4,6 +4,7 @@
 *  2018-11-1
 @C 2018, Prakash Rai
 */
+const PORT = process.env.PORT || 3000;
 
 const createError = require('http-errors');
 const express = require('express');

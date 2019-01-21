@@ -6,6 +6,9 @@
     "start": "node ./bin/www",
     "test": "mocha -R spec ./test/unit/**/*.spec.js"
   },
+  "engines": {
+    "node": "11.0.0"
+  },
   "dependencies": {
     "bluebird": "3.5.2",
     "chai": "4.2.0",

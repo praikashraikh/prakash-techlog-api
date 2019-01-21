@@ -11,7 +11,7 @@ const config = require('../config/app.config');
 module.exports = function(mongoose, PostSchema) {
     class PostService {
         /*
-        * Connect to mongoose if its disconnected
+        * Connect to mongoose if its disconnected s
         */
         connectMongoose(){
             if(mongoose.connection.readyState === 0){

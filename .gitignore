@@ -1,7 +1,5 @@
-api/node_modules
-api/build
-api/bin
-api/npm-debug.log
+node_modules
+build
+bin
+npm-debug.log
 
-ng-app
-ng-app/node_modules

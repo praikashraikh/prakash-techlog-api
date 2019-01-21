@@ -7,7 +7,8 @@
     "test": "mocha -R spec ./test/unit/**/*.spec.js"
   },
   "engines": {
-    "node": "11.0.0"
+    "node": "11.0.0",
+    "npm": "6.x"
   },
   "dependencies": {
     "bluebird": "3.5.2",

@@ -21,6 +21,7 @@ module.exports = function(mongoose, PostSchema) {
 
         /*
         * Connect to mongoose if its disconnected
+        * 
         */
        disConnectMongoose(){
             if(mongoose.connection.readyState === 3){

@@ -13,6 +13,7 @@ const lessMiddleware = require('less-middleware');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const PostSchema = require('./src/schema/post.schema');
+const cors = require('cors')
 
 const postService = require('./src/service/post.service')(mongoose, PostSchema);
 const postHandler = require('./src/handler/post.handler')(postService);
@@ -26,6 +27,7 @@ const errorHandler = require('./src/middleware/error-handler');
 const app = express();
 app.use(logger('dev'));
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));

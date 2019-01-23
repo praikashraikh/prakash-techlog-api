@@ -19,8 +19,6 @@ module.exports = function() {
                 token = jwt.sign(query, config.login.private_key);
             } 
 
-            this.verifyAuthToken(token);
-
             return new Promise((resolve, reject) => {
                 resolve(token);
             });

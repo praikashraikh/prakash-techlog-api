@@ -109,7 +109,7 @@ module.exports = function(mongoose, PostSchema) {
             // })
             
             // return Promise.all(returnArr);
-            return PostSchema.find(proQuery.search, { _id : 0, __v: 0 }).sort(proQuery.sort).skip(proQuery.page).limit(proQuery.pageSize);
+            return PostSchema.find(proQuery.search, { __v: 0 }).sort(proQuery.sort).skip(proQuery.page).limit(proQuery.pageSize);
         }
 
         /*

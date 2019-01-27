@@ -21,6 +21,9 @@ const authService = require('./src/service/auth.service')();
 const authHandler = require('./src/handler/auth.handler')(authService);
 const postsRouter = require('./src/api/post.route')(postHandler);
 const authRouter = require('./src/api/admin/auth.route')(authHandler);
+const uploadService = require('./src/service/file-upload.service')(mongoose, PostSchema);
+const uploadHandler = require('./src/handler/upload.handler')(uploadService);
+const uploadAdminRouter = require('./src/api/admin/upload.admin.route')(uploadHandler, authHandler);
 const postsAdminRouter = require('./src/api/admin/post.admin.route')(postHandler, authHandler);
 const errorHandler = require('./src/middleware/error-handler');
 
@@ -36,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/v1/post', postsRouter);
 app.use('/api/v1/admin/token', authRouter);
 app.use('/api/v1/admin/post', postsAdminRouter);
+app.use('/api/v1/admin/upload', uploadAdminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

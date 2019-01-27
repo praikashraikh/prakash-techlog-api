@@ -2,6 +2,10 @@ module.exports = {
     "connections": {
         "mongoDb": "mongodb://pr_elog_admin:abc123!#@ds151753.mlab.com:51753/prakash-techlog"
     },
+    "aws": {
+        accessKeyID: "AKIAJGVJW7MXJJN36MYQ",
+        secretAccessKey: "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"
+    },
     "login": {
         "username": "userPK",
         "password": "pw321!#",

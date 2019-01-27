@@ -3,8 +3,8 @@ module.exports = {
         "mongoDb": "mongodb://pr_elog_admin:abc123!#@ds151753.mlab.com:51753/prakash-techlog"
     },
     "aws": {
-        accessKeyID: "AKIAJGVJW7MXJJN36MYQ",
-        secretAccessKey: "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"
+        accessKeyID: "AKIAI76RFBNKKFHSGVEQ",
+        secretAccessKey: "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"
     },
     "login": {
         "username": "userPK",
